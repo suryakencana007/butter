@@ -48,13 +48,13 @@ fun MainActivityScreen(viewModel: MainActivityViewModel = hiltViewModel()) {
             }
         ) { paddingValues ->
             if (state.isInitialized) {
-            NavHost(
-                navController = navHostController,
-                startDestination = Screen.Home.route,
-                modifier = Modifier.padding(paddingValues)
-            ) {
-                addHomeRoutes(navHostController)
-            }
+                NavHost(
+                    navController = navHostController,
+                    startDestination = Screen.Home.route,
+                    modifier = Modifier.padding(paddingValues)
+                ) {
+                    addHomeRoutes(navHostController)
+                }
             }
         }
     }
